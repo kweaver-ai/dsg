@@ -72,13 +72,13 @@ logs:
     stacktrace_level: error
     development: false
     cores:
-      - destination: /data/logs/info.log        #日志输出地址
+      - destination: logs/info.log        #日志输出地址
         rotate_size: 100MB                      #文件分割尺寸
         core_type: file                         #core类型，file, stdout两种
         enable_color: false                     #是否开启输出颜色
         output_format: json                     #日志输出的格式, json, console
         log_level: info                         #该日志流的等级
-      - destination: /data/logs/error.log
+      - destination: logs/error.log
         rotate_size: 100MB
         core_type: file
         output_format: json
@@ -93,7 +93,7 @@ logs:
     enable_caller: true
     development: false
     cores:
-      - destination: /data/logs/http_request.log
+      - destination: logs/http_request.log
         rotate_size: 100MB
         core_type: file
         output_format: json

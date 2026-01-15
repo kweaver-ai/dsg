@@ -20,6 +20,8 @@ services:
       - USER_ORG_NAME=${USER_ORG_NAME:-default-org-name}
       # GOPRIVATE 环境变量
       - GOPRIVATE=github.com/kweaver-ai/*
+      - TRACE_ENABLED=false
+      - LOG_LEVEL=info
     volumes:
       - ../services/apps/basic-search/dev-config/config.docker.yaml:/opt/basic-search/config/config.yaml:ro
       - basic-search-logs:/opt/basic-search/logs
@@ -233,6 +235,10 @@ services:
       - KAFKA_MQ_PASSWORD=admin123
       - OAUTH_CLIENT_ID=${OAUTH_CLIENT_ID:-default-client-id}
       - OAUTH_CLIENT_SECRET=${OAUTH_CLIENT_SECRET:-default-client-secret}
+      - ANYROBOT_ENABLED=false
+      - TRACE_ENABLED=false
+      - AUDIT_ENABLED=false
+      - LOG_LEVEL=info
       - GOPRIVATE=github.com/kweaver-ai/*
     volumes:
       - ../services/apps/configuration-center/cmd/server/config/config.yaml:/opt/configuration-center/config/config.yaml:ro
@@ -276,6 +282,8 @@ services:
       - HYDRA_HOST=hydra:4445
       - HYDRA_PUBLIC_HOST=hydra:4444
       - CONFIGURATION_CENTER_HOST=configuration-center:8133
+      - TRACE_ENABLED=false
+      - LOG_LEVEL=info
       - GOPRIVATE=github.com/kweaver-ai/*
     volumes:
       - ../services/apps/data-catalog/cmd/server/config/config.yaml:/opt/data-catalog/config/config.yaml:ro
@@ -322,6 +330,9 @@ services:
       - CONFIGURATION_CENTER_HOST=configuration-center:8133
       - HYDRA_HOST_PRIVATE=hydra:4445
       - HYDRA_HOST_PUBLIC=hydra:4444
+      - HYDRA_HOST_PUBLIC=hydra:4444
+      - TRACE_ENABLED=false
+      - LOG_LEVEL=info
       - GOPRIVATE=github.com/kweaver-ai/*
     volumes:
       - ../services/apps/data-exploration-service/cmd/server/config/config.yaml:/opt/data-exploration-service/config/config.yaml:ro
@@ -366,6 +377,9 @@ services:
       - KAFKA_MECHANISM=PLAIN
       - HYDRA_ADMIN=hydra:4445
       - CONFIGURATION_CENTER=configuration-center:8133
+      - CONFIGURATION_CENTER=configuration-center:8133
+      - TRACE_ENABLED=false
+      - LOG_LEVEL=info
       - GOPRIVATE=github.com/kweaver-ai/*
     volumes:
       - ../services/apps/auth-service/cmd/server/config/config.yaml:/opt/auth-service/config/config.yaml:ro
@@ -409,6 +423,9 @@ services:
       - KAFKA_MQ_PASSWORD=admin123
       - CONFIGURATION_CENTER_HOST=configuration-center:8133
       - HYDRA_ADMIN=hydra:4445
+      - HYDRA_ADMIN=hydra:4445
+      - TRACE_ENABLED=false
+      - LOG_LEVEL=info
       - GOPRIVATE=github.com/kweaver-ai/*
     volumes:
       - ../services/apps/data-subject/cmd/server/config/config.yaml:/opt/data-subject/config/config.yaml:ro
@@ -458,6 +475,10 @@ services:
       - AUTH_SERVICE_HOST=auth-service:8155
       - DATA_SUBJECT_HOST=data-subject:8134
       - DATA_EXPLORE_HOST=data-exploration-service:8281
+      - DATA_EXPLORE_HOST=data-exploration-service:8281
+      - TRACE_ENABLED=false
+      - LOG_LEVEL=info
+      - AUDIT_ENABLED=false
       - GOPRIVATE=github.com/kweaver-ai/*
     volumes:
       - ../services/apps/data-view/cmd/server/config/config.yaml:/opt/data-view/config/config.yaml:ro
@@ -498,6 +519,9 @@ services:
       - HYDRA_ADMIN_HOST=hydra:4445
       - CONFIGURATION_CENTER_HOST=configuration-center:8133
       - USER_MANAGE_HOST=user-management-private:30980
+      - USER_MANAGE_HOST=user-management-private:30980
+      - TRACE_ENABLED=false
+      - LOG_LEVEL=info
       - GOPRIVATE=github.com/kweaver-ai/*
     volumes:
       - ../services/apps/session/cmd/server/config/config.yaml:/opt/session/config/config.yaml:ro
@@ -540,6 +564,9 @@ services:
       - OAUTH_CLIENT_SECRET=${OAUTH_CLIENT_SECRET:-default-client-secret}
       - HYDRA_HOST=hydra:4445
       - CONFIG_CENTER_HOST=configuration-center:8133
+      - CONFIG_CENTER_HOST=configuration-center:8133
+      - TRACE_ENABLED=false
+      - LOG_LEVEL=info
       - GOPRIVATE=github.com/kweaver-ai/*
     volumes:
       - ../services/apps/task_center/cmd/server/config/config.yaml:/opt/task-center/config/config.yaml:ro

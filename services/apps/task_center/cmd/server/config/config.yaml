@@ -102,7 +102,7 @@ logs:
     enable_caller: true
     development: false
     cores:
-      - destination: /data/logs/http_request.log
+      - destination: logs/http_request.log
         rotate_size: 100MB
         core_type: file
         output_format: json

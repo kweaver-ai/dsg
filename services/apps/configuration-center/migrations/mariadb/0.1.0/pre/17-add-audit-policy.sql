@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `audit_policy_resources` (
   `audit_policy_id` char(36) NOT NULL COMMENT '审核策略id，uuid',
   `type` char(36) NOT NULL COMMENT '资源类型 interface-svc（接口）， data-view（视图）， indicator（内置指标）',
   `deleted_at` bigint(20) DEFAULT 0 COMMENT '删除时间（逻辑删除）',
-  PRIMARY KEY (`sid`),
+  PRIMARY KEY (`sid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='审核策略资源定义';
 
 INSERT INTO `audit_policy` (`sid`,`id`,`name`,`description`,`type`,`status`,`resources_count`,`audit_type`,`proc_def_key`,`service_type`,`created_by_uid`,`updated_by_uid`,`deleted_at`)

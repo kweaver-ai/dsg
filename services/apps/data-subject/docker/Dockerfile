@@ -60,4 +60,4 @@ USER adp
 EXPOSE 8123
 
 # 指定启动命令
-ENTRYPOINT [ "./data-subject-server", "serve"]
+ENTRYPOINT [ "./data-subject-server", "serve", "--confPath", "config/"]

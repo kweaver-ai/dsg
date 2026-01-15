@@ -60,4 +60,4 @@ USER adp
 EXPOSE 8113
 
 # 指定启动命令
-ENTRYPOINT [ "./session-server", "serve"]
+ENTRYPOINT [ "./session-server", "serve", "--confPath", "config/"]

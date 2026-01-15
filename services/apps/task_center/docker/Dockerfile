@@ -62,4 +62,4 @@ USER adp
 EXPOSE 8143
 
 # 指定启动命令
-ENTRYPOINT [ "./task_center-server", "serve"]
+ENTRYPOINT [ "./task_center-server", "serve", "--confPath", "config/"]

@@ -60,4 +60,4 @@ USER adp
 EXPOSE 8155
 
 # 指定启动命令
-ENTRYPOINT [ "./auth-service-server", "serve"]
+ENTRYPOINT [ "./auth-service-server", "serve", "--confPath", "config/"]
