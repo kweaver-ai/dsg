@@ -3,6 +3,8 @@
 [![Go Version](https://img.shields.io/badge/Go-1.24+-00ADD8?style=flat&logo=go)](https://golang.org)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 A comprehensive enterprise-grade Data Semantic Governance (DSG) platform that provides unified data catalog management, data view management, data exploration, authentication and authorization, task orchestration, and semantic search capabilities.
 
 ## Overview

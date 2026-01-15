@@ -1,5 +1,7 @@
 # Subject Domain Service
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 A comprehensive business object management service built with Go that provides CRUD operations for business objects (Subject Domains), form-subject relations management, and Excel data import/export capabilities using Clean Architecture principles.
 
 ## Overview

@@ -5,6 +5,8 @@
 [![GORM](https://img.shields.io/badge/GORM-ORM-blue)](https://gorm.io)
 [![Wire](https://img.shields.io/badge/Wire-Dependency%20Injection-orange)](https://github.com/google/wire)
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 An enterprise-grade data view management microservice built with Go, using DDD (Domain-Driven Design) architecture to provide unified data view management, data lineage, data classification, data masking, and other core capabilities for the AnyFabric ecosystem.
 
 ## Table of Contents

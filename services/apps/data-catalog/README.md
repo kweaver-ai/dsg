@@ -1,5 +1,7 @@
 # Data Catalog Service
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 A comprehensive data catalog management service built with Go that provides data resource cataloging, information system management, data push capabilities, data comprehension, and workflow orchestration with multi-tenant support.
 
 ## Overview

@@ -1,5 +1,7 @@
 # Data Exploration Service
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 A comprehensive data exploration service built with Go that provides asynchronous data exploration capabilities, task configuration management, and report generation using Clean Architecture principles.
 
 ## Overview

@@ -1,5 +1,7 @@
 # 数据探查服务
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 一个使用 Go 构建的综合数据探查服务，基于 Clean Architecture 原则，提供异步数据探查能力、任务配置管理和报告生成功能。
 
 ## 概述

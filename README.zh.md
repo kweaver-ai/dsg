@@ -3,6 +3,8 @@
 [![Go Version](https://img.shields.io/badge/Go-1.24+-00ADD8?style=flat&logo=go)](https://golang.org)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 一个综合的企业级数据语义治理（DSG）系统，提供统一的数据目录管理、数据视图管理、数据探索、认证授权、任务编排和语义搜索能力。
 
 ## 概述

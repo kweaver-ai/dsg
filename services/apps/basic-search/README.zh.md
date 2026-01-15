@@ -1,5 +1,7 @@
 # 基础搜索服务
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 一个使用 Go 构建的综合搜索服务，提供数据目录、信息目录、接口服务、数据视图、电子证照、指标和信息系统的全文搜索能力，使用 OpenSearch/Elasticsearch 作为搜索引擎。
 
 ## 概述

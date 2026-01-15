@@ -1,5 +1,7 @@
 # Configuration Center Service
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 A comprehensive configuration management service built with Go that provides system configuration, user management, role and permission management, menu management, dictionary management, data source management, and workflow orchestration capabilities with multi-tenant support.
 
 ## Overview

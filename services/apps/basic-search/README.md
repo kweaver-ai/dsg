@@ -1,5 +1,7 @@
 # Basic Search Service
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 A comprehensive search service built with Go that provides full-text search capabilities for data catalogs, information catalogs, interface services, data views, electronic licenses, indicators, and information systems using OpenSearch/Elasticsearch.
 
 ## Overview

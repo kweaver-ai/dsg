@@ -1,5 +1,7 @@
 # Auth Service
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 A comprehensive authentication and authorization service built with Go that provides policy management, permission enforcement, indicator dimensional rules, and data warehouse authorization request capabilities with multi-tenant support.
 
 ## Overview

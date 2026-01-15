@@ -1,5 +1,7 @@
 # Session Service
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 A comprehensive session management service built with Go that provides authentication, authorization, and session management capabilities using OAuth2/OIDC protocols and Redis for session storage.
 
 ## Overview

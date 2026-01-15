@@ -1,5 +1,7 @@
 # 会话管理服务
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 一个使用 Go 构建的综合会话管理服务，基于 OAuth2/OIDC 协议和 Redis 会话存储，提供认证、授权和会话管理功能。
 
 ## 概述

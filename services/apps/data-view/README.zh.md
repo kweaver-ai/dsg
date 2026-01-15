@@ -5,6 +5,8 @@
 [![GORM](https://img.shields.io/badge/GORM-ORM-blue)](https://gorm.io)
 [![Wire](https://img.shields.io/badge/Wire-Dependency%20Injection-orange)](https://github.com/google/wire)
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 一个企业级数据视图管理微服务，采用DDD（领域驱动设计）架构，为iDRM生态系统提供统一的数据视图管理、数据血缘、数据分级、数据脱敏等核心能力。
 
 ## 目录

@@ -1,5 +1,7 @@
 # Task Center Service
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 A comprehensive task management and workflow orchestration service built with Go that provides project management, task tracking, work order management, and data processing capabilities with multi-tenant support.
 
 ## Overview

@@ -1,5 +1,7 @@
 # 业务对象管理服务
 
+**Language / 语言**: [English](README.md) | [中文](README.zh.md)
+
 一个使用 Go 构建的综合业务对象管理服务，基于 Clean Architecture 原则，提供业务对象（Subject Domain）CRUD 操作、表单-主体关系管理以及 Excel 数据导入导出功能。
 
 ## 概述
