@@ -14,7 +14,8 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
-app
+/app
+/server
 # Go workspace file
 go.work
 dev-config/*
@@ -26,5 +27,3 @@ logs/
 build-to-image.sh
 
 
-# Whitelist cmd/server directory (conflicts with root 'server' rule)
-!cmd/server

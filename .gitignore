@@ -55,7 +55,6 @@ Thumbs.db
 # Air live reload
 tmp/
 
-server
 
 # Delve debugger
 debug
