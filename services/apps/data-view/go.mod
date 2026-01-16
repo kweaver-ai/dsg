@@ -7,7 +7,7 @@ require (
 	github.com/Shopify/sarama v1.38.1
 	github.com/avast/retry-go v3.0.0+incompatible
 	github.com/cheerego/go-redisson v0.0.6
-	github.com/gin-gonic/gin v1.10.1
+	github.com/gin-gonic/gin v1.9.1
 	github.com/go-playground/locales v0.14.1
 	github.com/go-playground/universal-translator v0.18.1
 	github.com/go-playground/validator/v10 v10.30.1

@@ -9,7 +9,7 @@ require (
 	github.com/avast/retry-go v3.0.0+incompatible
 	github.com/daknob/ntlm v0.0.0-20180331151128-c6369eea43f9
 	github.com/extrame/xls v0.0.1
-	github.com/gin-gonic/gin v1.10.1
+	github.com/gin-gonic/gin v1.9.1
 	github.com/glebarez/sqlite v1.5.0
 	github.com/go-playground/locales v0.14.1
 	github.com/go-playground/universal-translator v0.18.1
