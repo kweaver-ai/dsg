@@ -18,8 +18,8 @@ require (
 	github.com/jinzhu/copier v0.4.0
 	github.com/json-iterator/go v1.1.12
 	github.com/kweaver-ai/TelemetrySDK-Go/exporter/v2 v2.10.2
-	github.com/kweaver-ai/idrm-go-common v0.1.3-0.20260116082933-aab7e0446f07
-	github.com/kweaver-ai/idrm-go-frame v0.1.3-0.20260116082710-3e070771f7a8
+	github.com/kweaver-ai/idrm-go-common v0.1.3
+	github.com/kweaver-ai/idrm-go-frame v0.1.3
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/nsqio/go-nsq v1.1.0
 	github.com/panjf2000/ants/v2 v2.8.1
@@ -35,7 +35,7 @@ require (
 	github.com/swaggo/swag v1.16.4
 	github.com/uptrace/opentelemetry-go-extra/otelgorm v0.3.2
 	github.com/xuri/excelize/v2 v2.9.0
-	github.com/zeromicro/go-zero v1.6.4
+	github.com/zeromicro/go-zero v1.4.1
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.64.0
 	go.opentelemetry.io/otel/trace v1.39.0
 	go.uber.org/mock v0.6.0
