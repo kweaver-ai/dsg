@@ -86,6 +86,22 @@ DSG consists of the following components:
 - Session authentication
 - Token management
 
+#### 10. **Data Application Service** (Port: 8156)
+- API interface management
+- Data service publishing
+- API lifecycle management
+- Workflow integration for API approval
+- Change Data Capture (CDC) for real-time synchronization
+- Service statistics and monitoring
+
+#### 11. **Data Application Gateway** (Port: 8157)
+- Unified API gateway for data services
+- Request routing and forwarding
+- API execution and invocation
+- Service discovery
+- Request validation and transformation
+- Rate limiting and access control
+
 ### Infrastructure Services
 
 - **OpenSearch** (Port: 9200, 9600): Full-text search engine
@@ -127,6 +143,14 @@ DSG consists of the following components:
 - **Work Order System**: Work order creation and tracking
 - **Data Processing Pipelines**: Data aggregation and processing workflows
 - **Audit Workflows**: Audit process management and tracking
+
+### Data Application & API Management
+- **API Management**: Comprehensive API interface creation and lifecycle management
+- **Data Service Publishing**: Publish data views and catalogs as RESTful APIs
+- **API Gateway**: Unified entry point for API execution with routing and load balancing
+- **Service Discovery**: Dynamic discovery of published data services
+- **Request Processing**: Request validation, transformation, and response formatting
+- **API Monitoring**: Service call statistics and performance monitoring
 
 ### System Management
 - **Configuration Management**: Centralized system configuration
@@ -177,7 +201,9 @@ dsg/
 │       ├── data-subject/          # Data subject management
 │       ├── data-view/             # Data view management
 │       ├── session/              # Session management
-│       └── task_center/           # Task and workflow management
+│       ├── task_center/           # Task and workflow management
+│       ├── data-application-service/  # Data application and API management
+│       └── data-application-gateway/  # API gateway for data services
 ├── frontend/             # Frontend web application
 │   ├── src/             # Source code
 │   ├── public/          # Static assets
@@ -260,6 +286,8 @@ Access service endpoints:
 - **Data View**: http://localhost:8123
 - **Auth Service**: http://localhost:8155
 - **Task Center**: http://localhost:8080
+- **Data Application Service**: http://localhost:8156
+- **Data Application Gateway**: http://localhost:8157
 
 ## Development
 
@@ -281,6 +309,8 @@ DSG uses Go workspaces to manage multiple services:
 # - session
 # - task_center
 # - data-view
+# - data-application-service
+# - data-application-gateway
 ```
 
 ### Building Individual Services
@@ -394,6 +424,8 @@ Services communicate through:
 5. **Access Control**: Auth Service enforces access policies
 6. **Exploration**: Data Exploration Service provides exploration capabilities
 7. **Workflow**: Task Center orchestrates workflows and processes
+8. **API Publishing**: Data Application Service publishes data as RESTful APIs
+9. **API Execution**: Data Application Gateway provides unified access to published APIs
 
 ## Security
 
@@ -423,6 +455,8 @@ Each service provides Swagger/OpenAPI documentation:
 - **Data View**: http://localhost:8123/swagger/index.html
 - **Auth Service**: http://localhost:8155/swagger/index.html
 - **Task Center**: http://localhost:8080/swagger/index.html
+- **Data Application Service**: http://localhost:8156/swagger/index.html
+- **Data Application Gateway**: http://localhost:8157/swagger/index.html
 
 ## Contributing
 
@@ -445,6 +479,8 @@ Each service has its own detailed README:
 - [Data View Service](services/apps/data-view/README.md)
 - [Auth Service](services/apps/auth-service/README.md)
 - [Task Center Service](services/apps/task_center/README.md)
+- [Data Application Service](services/apps/data-application-service/README.md)
+- [Data Application Gateway](services/apps/data-application-gateway/README.md)
 
 ## License
 

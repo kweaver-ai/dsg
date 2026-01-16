@@ -86,6 +86,22 @@ DSG 由以下组件组成：
 - 会话认证
 - 令牌管理
 
+#### 10. **数据应用服务** (端口: 8156)
+- API 接口管理
+- 数据服务发布
+- API 生命周期管理
+- API 审批工作流集成
+- 变更数据捕获（CDC）实现实时同步
+- 服务统计和监控
+
+#### 11. **数据应用网关** (端口: 8157)
+- 数据服务统一 API 网关
+- 请求路由和转发
+- API 执行和调用
+- 服务发现
+- 请求验证和转换
+- 限流和访问控制
+
 ### 基础设施服务
 
 - **OpenSearch** (端口: 9200, 9600): 全文搜索引擎
@@ -127,6 +143,14 @@ DSG 由以下组件组成：
 - **工单系统**：工单创建和跟踪
 - **数据处理管道**：数据聚合和处理工作流
 - **审核工作流**：审核流程管理和跟踪
+
+### 数据应用与 API 管理
+- **API 管理**：全面的 API 接口创建和生命周期管理
+- **数据服务发布**：将数据视图和目录发布为 RESTful API
+- **API 网关**：统一的 API 执行入口点，支持路由和负载均衡
+- **服务发现**：动态发现已发布的数据服务
+- **请求处理**：请求验证、转换和响应格式化
+- **API 监控**：服务调用统计和性能监控
 
 ### 系统管理
 - **配置管理**：集中式系统配置
@@ -177,7 +201,9 @@ dsg/
 │       ├── data-subject/          # 数据主体管理服务
 │       ├── data-view/             # 数据视图管理服务
 │       ├── session/              # 会话管理服务
-│       └── task_center/           # 任务和工作流管理服务
+│       ├── task_center/           # 任务和工作流管理服务
+│       ├── data-application-service/  # 数据应用和 API 管理服务
+│       └── data-application-gateway/  # 数据服务 API 网关
 ├── frontend/             # 前端 Web 应用
 │   ├── src/             # 源代码
 │   ├── public/          # 静态资源
@@ -260,6 +286,8 @@ docker-compose ps
 - **数据视图**: http://localhost:8123
 - **认证服务**: http://localhost:8155
 - **任务中心**: http://localhost:8080
+- **数据应用服务**: http://localhost:8156
+- **数据应用网关**: http://localhost:8157
 
 ## 开发
 
@@ -281,6 +309,8 @@ DSG 使用 Go 工作区管理多个服务：
 # - session
 # - task_center
 # - data-view
+# - data-application-service
+# - data-application-gateway
 ```
 
 ### 构建单个服务
@@ -394,6 +424,8 @@ docker-compose up -d
 5. **访问控制**：认证服务执行访问策略
 6. **探索**：数据探索服务提供探索能力
 7. **工作流**：任务中心编排工作流和流程
+8. **API 发布**：数据应用服务将数据发布为 RESTful API
+9. **API 执行**：数据应用网关提供统一访问已发布 API 的入口
 
 ## 安全
 
@@ -423,6 +455,8 @@ docker-compose up -d
 - **数据视图**: http://localhost:8123/swagger/index.html
 - **认证服务**: http://localhost:8155/swagger/index.html
 - **任务中心**: http://localhost:8080/swagger/index.html
+- **数据应用服务**: http://localhost:8156/swagger/index.html
+- **数据应用网关**: http://localhost:8157/swagger/index.html
 
 ## 贡献
 
@@ -445,6 +479,8 @@ docker-compose up -d
 - [数据视图服务](services/apps/data-view/README.md)
 - [认证授权服务](services/apps/auth-service/README.md)
 - [任务中心服务](services/apps/task_center/README.md)
+- [数据应用服务](services/apps/data-application-service/README.md)
+- [数据应用网关](services/apps/data-application-gateway/README.md)
 
 ## 许可证
 
