@@ -6,7 +6,7 @@ require (
 	github.com/Shopify/sarama v1.38.1
 	github.com/biocrosscoder/flex v0.1.3
 	github.com/cheerego/go-redisson v0.0.6
-	github.com/gin-gonic/gin v1.11.0
+	github.com/gin-gonic/gin v1.10.1
 	github.com/go-playground/locales v0.14.1
 	github.com/go-playground/universal-translator v0.18.1
 	github.com/go-playground/validator/v10 v10.30.1
@@ -17,9 +17,9 @@ require (
 	github.com/google/wire v0.7.0
 	github.com/jinzhu/copier v0.4.0
 	github.com/json-iterator/go v1.1.12
-	github.com/kweaver-ai/TelemetrySDK-Go/exporter/v2 v2.10.3
-	github.com/kweaver-ai/idrm-go-common v0.1.2
-	github.com/kweaver-ai/idrm-go-frame v0.1.3-0.20260115055217-6aac59b7f1cb
+	github.com/kweaver-ai/TelemetrySDK-Go/exporter/v2 v2.10.2
+	github.com/kweaver-ai/idrm-go-common v0.1.3-0.20260116082933-aab7e0446f07
+	github.com/kweaver-ai/idrm-go-frame v0.1.3-0.20260116082710-3e070771f7a8
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/nsqio/go-nsq v1.1.0
 	github.com/panjf2000/ants/v2 v2.8.1
@@ -35,7 +35,7 @@ require (
 	github.com/swaggo/swag v1.16.4
 	github.com/uptrace/opentelemetry-go-extra/otelgorm v0.3.2
 	github.com/xuri/excelize/v2 v2.9.0
-	github.com/zeromicro/go-zero v1.4.1
+	github.com/zeromicro/go-zero v1.6.4
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.64.0
 	go.opentelemetry.io/otel/trace v1.39.0
 	go.uber.org/mock v0.6.0
@@ -159,7 +159,7 @@ require (
 	golang.org/x/sys v0.39.0 // indirect
 	golang.org/x/text v0.32.0 // indirect
 	golang.org/x/tools v0.39.0 // indirect
-	google.golang.org/protobuf v1.36.11 // indirect
+	google.golang.org/protobuf v1.34.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/datatypes v1.2.0 // indirect
@@ -177,7 +177,6 @@ require (
 	github.com/cloudwego/base64x v0.1.6 // indirect
 	github.com/emicklei/go-restful/v3 v3.11.0 // indirect
 	github.com/go-viper/mapstructure/v2 v2.4.0 // indirect
-	github.com/goccy/go-yaml v1.18.0 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/gnostic-models v0.6.8 // indirect
@@ -188,8 +187,6 @@ require (
 	github.com/onsi/ginkgo/v2 v2.22.0 // indirect
 	github.com/onsi/gomega v1.34.2 // indirect
 	github.com/opencontainers/image-spec v1.0.3-0.20211202183452-c5a74bcca799 // indirect
-	github.com/quic-go/qpack v0.6.0 // indirect
-	github.com/quic-go/quic-go v0.58.0 // indirect
 	github.com/sagikazarmark/locafero v0.11.0 // indirect
 	github.com/segmentio/kafka-go v0.4.49 // indirect
 	github.com/shoenig/go-m1cpu v0.1.6 // indirect
@@ -217,5 +214,3 @@ require (
 	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // indirect
 )
-
-replace google.golang.org/protobuf => google.golang.org/protobuf v1.34.2
