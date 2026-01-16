@@ -35,7 +35,7 @@ func Test_virtualEngineRepo_Fetch(t *testing.T) {
 						ServiceID: "",
 						Param:     "developer_name",
 						Operator:  "=",
-						Value:     "aishu",
+						Value:     "xxx",
 					},
 				},
 			},

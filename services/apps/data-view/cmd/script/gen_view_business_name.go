@@ -63,8 +63,8 @@ func genBusiness(data []any) string {
 
 var rootCmd = &cobra.Command{
 	Use:   "root",
-	Short: "gen-name  Minhang Special Handling Script",
-	Long:  `gen-name  Minhang Special Handling Script (organdame,sys_name_zh,table_des) to BusinessName`,
+	Short: "gen-name  xxx Special Handling Script",
+	Long:  `gen-name  xxx Special Handling Script (organdame,sys_name_zh,table_des) to BusinessName`,
 	Run: func(cmd *cobra.Command, args []string) {
 		ctx := context.Background()
 		querySql := "select aim_inceptortable,organdame,sys_name_zh,table_des from vdm_inceptor_jdbc_ozw081wh.default.rocket_table_status where  aim_inceptortable is not null "

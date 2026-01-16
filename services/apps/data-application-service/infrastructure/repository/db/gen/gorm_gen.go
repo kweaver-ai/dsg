@@ -39,7 +39,7 @@ func main() {
 	flag.Parse()
 
 	if len(dsn) == 0 {
-		dsn = "anyshare:eisoo.com123@(mariadb-mariadb-master.resource:3330)/data_application_service?charset=utf8mb4&parseTime=True&loc=Local"
+		dsn = "username:xxx@(mariadb-mariadb-master.resource:3330)/data_application_service?charset=utf8mb4&parseTime=True&loc=Local"
 	}
 
 	if len(dsn) == 0 {

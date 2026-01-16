@@ -14,10 +14,10 @@ func main() {
 		//OutPath: "D:\\af\\src\\af-business-grooming",
 		//OutPath: "D:\\tmp",
 		OutPath: "infrastructure/db/model",
-		Mode: gen.WithoutContext | gen.WithDefaultQuery | gen.WithQueryInterface,
+		Mode:    gen.WithoutContext | gen.WithDefaultQuery | gen.WithQueryInterface,
 	})
 
-	db, err := gorm.Open(mysql.Open("root:eisoo.com123@(10.4.108.86:3330)/af_main?charset=utf8mb4&parseTime=True&loc=Local"))
+	db, err := gorm.Open(mysql.Open("username:xxx@(10.4.108.86:3330)/af_main?charset=utf8mb4&parseTime=True&loc=Local"))
 	if err != nil {
 		panic(fmt.Errorf("cannot establish db connection: %w", err))
 	}

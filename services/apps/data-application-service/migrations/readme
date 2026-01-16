@@ -9,7 +9,3 @@ migrations目录
             2. 必需幂等，升级过程中如果脚本执行失败，会重复执行
         ii. post目录，存放服务升级后执行的脚本，当前仅允许含一个升级脚本，文件命名规则同上，如：01-xx.sql、01-xx.py
         iii. 升级模型文件如何编写，请参照Feature-361823逻辑设计中的编写示例
-
-参考链接：
-https://confluence.aishu.cn/pages/viewpage.action?pageId=183165748
-https://confluence.aishu.cn/pages/viewpage.action?pageId=185580092

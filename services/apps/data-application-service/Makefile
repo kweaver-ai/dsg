@@ -98,8 +98,8 @@ run:
 # database migrate config
 MYSQL_HOST=mariadb-mariadb-master.resource
 MYSQL_PORT=3330
-MYSQL_USERNAME=anyshare
-MYSQL_PASSWORD=eisoo.com123
+MYSQL_USERNAME=username
+MYSQL_PASSWORD=xxx
 MYSQL_DB=data_application_service
 
 SQL_PATH='infrastructure/repository/db/gen/migration'

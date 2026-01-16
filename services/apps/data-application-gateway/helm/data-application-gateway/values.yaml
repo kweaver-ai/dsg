@@ -11,7 +11,7 @@ labels:
 
 
 image:
-  registry: acr.aishu.cn
+  registry: acr.xxx.cn
   repository: af/data-application-gateway
   tag: "1.0.0-alpha"
   pullPolicy: IfNotPresent
@@ -53,11 +53,11 @@ depServices:
     host: mariadb-mariadb-master.resource
     port: 3330
     user: anyshare
-    password: eisoo.com123
+    password: xxx
     database: data_application_service
   redis:
     host: proton-redis-proton-redis-sentinel.resource:26379
-    password: eisoo.com123
+    password: xxx
     master_name: mymaster
   mq:
     kafka:
@@ -67,7 +67,7 @@ depServices:
       lookupdHost: kafka-headless.resource
       lookupdPort: 9097
       username: kafkaclient
-      password: eisoo.com123
+      password: xxx
       mechanism: PLAIN
     nsq:
       type: nsq
