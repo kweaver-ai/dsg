@@ -8,22 +8,22 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kweaver-ai/idrm-go-common/errorcode"
+	"github.com/google/uuid"
 	"github.com/kweaver-ai/dsg/services/apps/data-view/adapter/driven/mq/es"
 	"github.com/kweaver-ai/dsg/services/apps/data-view/adapter/driven/rest/mdl_data_model"
 	my_errorcode "github.com/kweaver-ai/dsg/services/apps/data-view/common/errorcode"
+	"github.com/kweaver-ai/idrm-go-common/errorcode"
 	"github.com/kweaver-ai/idrm-go-frame/core/errorx/agerrors"
 	"github.com/kweaver-ai/idrm-go-frame/core/telemetry/log"
-	"github.com/google/uuid"
 	"github.com/samber/lo"
 	"go.uber.org/zap"
 
-	"github.com/kweaver-ai/idrm-go-common/rest/data_view"
 	form_view_repo "github.com/kweaver-ai/dsg/services/apps/data-view/adapter/driven/gorm/form_view"
 	"github.com/kweaver-ai/dsg/services/apps/data-view/common/constant"
 	"github.com/kweaver-ai/dsg/services/apps/data-view/common/util"
 	"github.com/kweaver-ai/dsg/services/apps/data-view/domain/form_view"
 	"github.com/kweaver-ai/dsg/services/apps/data-view/infrastructure/db/model"
+	"github.com/kweaver-ai/idrm-go-common/rest/data_view"
 	"github.com/kweaver-ai/idrm-go-frame/core/enum"
 )
 
@@ -430,7 +430,7 @@ func (f *formViewUseCase) newFormView(ctx context.Context, uniformCatalogCode st
 		fields[i] = &model.FormViewField{
 			FormViewID:       formViewId,
 			TechnicalName:    field.Name,
-			BusinessName:     field.DisplayName,
+			BusinessName:     util.CutStringByCharCount(field.Comment, constant.CommentCharCountLimit),
 			OriginalName:     field.OriginalName,
 			Comment:          sql.NullString{String: util.CutStringByCharCount(field.Comment, constant.CommentCharCountLimit), Valid: true},
 			Status:           constant.FormViewNew.Integer.Int32(),
@@ -452,7 +452,7 @@ func (f *formViewUseCase) newFormView(ctx context.Context, uniformCatalogCode st
 		ID:                 formViewId,
 		UniformCatalogCode: uniformCatalogCode,
 		TechnicalName:      table.TechnicalName,
-		BusinessName:       table.Name,
+		BusinessName:       util.CutStringByCharCount(table.Comment, constant.CommentCharCountLimit),
 		OriginalName:       table.TechnicalName,
 		Type:               constant.FormViewTypeDatasource.Integer.Int32(),
 		DatasourceID:       viewMap[table.Id].DataSourceId,
@@ -508,7 +508,7 @@ func (f *formViewUseCase) updateFormView(ctx context.Context, formView *model.Fo
 			newField := &model.FormViewField{
 				FormViewID:       formView.ID,
 				TechnicalName:    field.Name,
-				BusinessName:     field.DisplayName,
+				BusinessName:     util.CutStringByCharCount(field.Comment, constant.CommentCharCountLimit),
 				OriginalName:     field.OriginalName,
 				Comment:          sql.NullString{String: util.CutStringByCharCount(field.Comment, constant.CommentCharCountLimit), Valid: true},
 				Status:           constant.FormViewFieldNew.Integer.Int32(),
@@ -564,7 +564,7 @@ func (f *formViewUseCase) updateFormView(ctx context.Context, formView *model.Fo
 	}
 	tableStatusInt := enum.ToInteger[constant.FormViewScanStatus](table.Status).Int32()
 	formViewUpdate := formView.Comment.String != table.Comment || formView.OriginalName != table.TechnicalName ||
-		formView.BusinessName != table.Name || formView.Status != tableStatusInt
+		formView.BusinessName != util.CutStringByCharCount(table.Comment, constant.CommentCharCountLimit) || formView.Status != tableStatusInt
 	if formViewUpdate {
 		formView.Comment = sql.NullString{String: util.CutStringByCharCount(table.Comment, constant.CommentCharCountLimit), Valid: true}
 		formView.OriginalName = table.TechnicalName
@@ -585,7 +585,7 @@ func (f *formViewUseCase) updateFormView(ctx context.Context, formView *model.Fo
 		formViewUpdate = true
 	}
 	formView.Status = tableStatusInt
-	formView.BusinessName = table.Name
+	formView.BusinessName = util.CutStringByCharCount(table.Comment, constant.CommentCharCountLimit)
 	// 字段没有变化且视图信息也没有变化时，不更新 DB/ES
 	if len(newFields) == 0 && len(updateFields) == 0 && len(deleteFields) == 0 && !formViewUpdate && !newUniformCatalogCode {
 		return nil
