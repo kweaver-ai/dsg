@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: consumer
-        image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}-consumer:{{ .Values.image.tag }}"
+        image: "{{ .Values.image.registry }}/{{ .Values.image.consumer.repository }}:{{ .Values.image.consumer.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
         - name: POD_IP

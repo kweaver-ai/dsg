@@ -29,9 +29,13 @@ name: data-semantic-deployment
 
 image:
   registry: acr.xxx.cn
-  repository: af/data-semantic
-  tag: "1.0.0-develop"
   pullPolicy: IfNotPresent
+  api:
+    repository: af/data-semantic
+    tag: "1.0.0-develop"
+  consumer:
+    repository: af/data-semantic-consumer
+    tag: "1.0.0-develop"
 
 nodeSelector: []
 
