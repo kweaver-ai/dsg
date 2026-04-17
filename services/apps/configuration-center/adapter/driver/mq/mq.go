@@ -44,6 +44,6 @@ func NewMQ(
 	mq.Handler(CreateDepartmentTopic, department.CreateDepartmentMessage)
 	mq.Handler(DeleteDepartment, department.DeleteDepartmentMessage)
 	mq.Handler(MoveDepartment, department.MoveDepartmentMessage)
-	mq.Handler("adp.datasource", datasource.ConsumeDatasource)
+	mq.Handler("kweaver.datasource", datasource.ConsumeDatasource)
 	return mq, nil
 }
