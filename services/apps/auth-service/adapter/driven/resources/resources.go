@@ -53,11 +53,11 @@ func (c *RegisterClient) RegisterAll(ctx context.Context) error {
 		log.Errorf("Warning: Failed to bind obligation type %s to resource %s: %v", authorization.OBLIGATION_TYPE_IDRM_DATA, authorization.RESOURCE_TYPE_MENUS, err)
 		return err
 	}
-	//注册全局菜单按钮
-	if err := c.studioWeb.InsertWebApps(ctx, defaultWebApps); err != nil {
-		log.Errorf("Warning: Failed to register global menus : %v", err)
-		return err
-	}
+	//注册全局菜单按钮（暂时注释）
+	//if err := c.studioWeb.InsertWebApps(ctx, defaultWebApps); err != nil {
+	//	log.Errorf("Warning: Failed to register global menus : %v", err)
+	//	return err
+	//}
 	return nil
 }
 
